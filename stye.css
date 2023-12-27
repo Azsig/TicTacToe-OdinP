@@ -1,0 +1,108 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.head>h1+p{
+    text-align: center;
+}
+
+.main{
+    aspect-ratio: 2/1;
+    width: 80%;
+    background-color: aqua;
+    display: grid;
+    place-items: center;
+    box-shadow:5px 10px rgb(49, 48, 48);
+    border: 2px black solid;
+    border-radius: 10px;
+}
+
+#player1,
+#player2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.syimbol{
+    width: 5rem;
+    display: grid;
+    place-content: center;
+    aspect-ratio: 1/1;
+    background-color: azure;
+    margin-bottom: 2rem;
+    border: 1px green solid;
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.awalan form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.awalan button{
+    width: 10rem;
+    align-self: center;
+    height: 3rem;
+}
+
+#ChoiceForm{
+    display: flex;
+    gap: 50px;
+}
+
+#player1 input,
+#player2 input{
+    width: 70%;
+}
+
+#ChoiceForm>div{
+    text-align: center;
+}
+
+.hidden{
+    display: none;
+}
+
+
+#board{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 300px;
+    height: 300px;
+}
+
+.cell{
+    border: 1px black solid;
+    background-color: white;
+}
+
+.GameBoard{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+.GameBoard #text{
+    width: 25rem;
+    aspect-ratio: 2/0.2;
+    border: solid rgb(43, 36, 36) 1px;
+    border-radius: 1rem;
+    background-color: azure;
+}
+
+.GameBoard #btn{
+    display: flex;
+    gap: 50px;
+}
+
+.GameBoard button{
+    width: 5rem;
+    border-radius: 20%;
+}
