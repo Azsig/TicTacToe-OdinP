@@ -64,7 +64,7 @@ body{
     text-align: center;
 }
 
-.hidden{
+.main>.hidden{
     display: none;
 }
 
