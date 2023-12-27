@@ -96,14 +96,14 @@ const Game = () =>{
     //function to make new round after one round
     function newRound(){
         papan.printBoard()
-        text.textContent = `giliran ${playerAktif.nama} untuk jalan`
+        text.textContent = `Giliran ${playerAktif.nama} untuk jalan`
         console.log(`giliran ${playerAktif.nama} untuk jalan`)
     }
 
     //function to print the winner
     function winner(player){
         text.textContent = `pemenangnya adalah ${player.nama}`
-        console.log(`pemenangnya adalah ${player.nama}`)
+        console.log(`Pemenangnya adalah ${player.nama}`)
     }
 
     //function that check the winner
@@ -152,12 +152,31 @@ const Game = () =>{
         })
     }
 
-    text.textContent = `giliran ${playerAktif.nama} untuk jalan`
+    text.textContent = `Giliran ${playerAktif.nama} untuk jalan`
 
     return{playRound, printPlayer, reset}
 
 }
 
+let permainan;
+
+let playbtn = document.querySelector('#play')
+let gameboard = document.querySelector('.GameBoard');
+let awalan = document.querySelector('.awalan');
+let change = document.querySelector('#change');
+
+playbtn.addEventListener('click', () => {
+    awalan.classList.add('hidden');
+    permainan = Game();
+    gameboard.classList.remove('hidden');
+})
+
+change.addEventListener('click', () => {
+    gameboard.classList.add('hidden');
+    permainan.reset()
+    permainan = '';
+    awalan.classList.remove('hidden');
+})
 
 
 
